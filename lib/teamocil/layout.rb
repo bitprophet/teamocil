@@ -28,7 +28,7 @@ module Teamocil
     # @return [Session]
     def compile!
       if @layout["session"].nil?
-        @session = Session.new @options, "windows" => @layout["windows"]
+        @session = Session.new @options, "windows" => @layout["windows"], "implicit" => true
       else
         @session = Session.new @options, @layout["session"]
       end
